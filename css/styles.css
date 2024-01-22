@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+:root {
+    --primary-colour: hsl(215, 51%, 70%);
+    --secondary-colour: hsl(178, 100%, 50%);
+
+    --dark-blue-bg: hsl(217, 54%, 11%);
+    --dark-blue-cbg: hsl(216, 50%, 16%);
+    --dark-blue-line: hsl(215, 32%, 27%);
+    --white: hsl(0, 0%, 100%);
+
+    --primary-font: Outfit, sans-serif;
+
+    --fw-regular: 300;
+    --fw-semibold: 400;
+    --fw-bold: 600;
+
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+p,
+h1 {
+    overflow-wrap: break-word;
+}
+
+p {
+    line-height: 1.2rem;
+    font-size: 0.9rem;
+}
+
+.flex-div {
+    display: flex;
+    align-items: center;
+}
+
+body {
+    font-family: var(--primary-font);
+    font-weight: var(--fw-regular);
+    color: var(--primary-colour);
+    font-size: 16px;
+    background-color: var(--dark-blue-bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nft-card {
+    max-width: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 1.1rem;
+    border-radius: 1rem;
+    padding: 1.2rem;
+    background-color: var(--dark-blue-cbg);
+    box-shadow: 0px 6px 7px 6px rgba(0, 0, 0, 0.3);
+}
+
+.image-overlay {
+    display: block;
+    position: relative;
+    width: auto;
+}
+
+.image-overlay img{
+    display: block;
+    border-radius: 0.5rem;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    justify-content: center;
+    border-radius: 0.5rem;
+    background: hsla(178, 100%, 50%, 0.4);
+}
+
+.overlay:hover {
+    opacity: 1;
+}
+
+.image-overlay, 
+.nft-card-title,
+.creator-name {
+    cursor: pointer;
+}
+
+.nft-card-title:hover,
+.creator-name:hover {
+    color: var(--secondary-colour);
+}
+
+.nft-card-title {
+    font-weight: var(--fw-bold);
+    font-size: 1.125em;
+    color: var(--white);
+}
+
+.nft-card-details {
+    justify-content: space-between;
+}
+
+.ethereum,
+.days-left {
+    gap: 0.3rem;
+    font-size: 0.9rem;
+}
+
+.ethereum {
+    color: var(--secondary-colour);
+    font-weight: var(--fw-semibold);
+}
+
+hr {
+    height: 2px;
+    border: none;
+    background-color: var(--dark-blue-line);
+}
+.creator-details {
+    gap: 1rem;
+}
+
+.creator-details img {
+    width: 30px;
+    border: 1px solid hsl(0, 0%, 100%);
+    border-radius: 1rem;
+}
+
+.creator-details p {
+    font-size: 0.8rem;
+}
